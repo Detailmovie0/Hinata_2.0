@@ -148,7 +148,7 @@ STAR_PREMIUM_PLANS = {
     18: "7day",
     30: "15day",    
     60: "1month", 
-   110: "2month",   
+    110: "2month",   
 }
 
 Bot_cmds = {
