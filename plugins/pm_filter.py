@@ -1478,7 +1478,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     
     elif query.data == "me":
         buttons = [[
-            InlineKeyboardButton ('🎁 sᴏᴜʀᴄᴇ', callback_data='source'),
+            InlineKeyboardButton ('sᴏᴜʀᴄᴇ owner', callback_data='source'),
         ],[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
         ]]
@@ -1491,7 +1491,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 📜', url='https://github.com/NBBotz/Auto-Filter-Bot.git'),
+            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ owner', url='https://t.me/dvl_naruto_06'),
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='me')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
