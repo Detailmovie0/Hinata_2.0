@@ -1928,10 +1928,10 @@ async def auto_filter(client, msg, spoll=False):
             settings = await get_settings(message.chat.id)
             if not files:
                 if settings["spell_check"]:
-                    ai_sts = await m.edit('🤖 ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ, ᴀɪ ɪꜱ ᴄʜᴇᴄᴋɪɴɢ ʏᴏᴜʀ ꜱᴘᴇʟʟɪɴɢ...')
+                    ai_sts = await m.edit('👀 𝗔𝗰𝘁𝗶𝘃𝗮𝘁𝗶𝗻𝗴 𝗦𝘂𝗽𝗲𝗿 𝗔𝗶 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴 𝗖𝗵𝗲𝗰𝗸𝗲𝗿 ⚡️...🌿')
                     is_misspelled = await ai_spell_check(chat_id = message.chat.id,wrong_name=search)
                     if is_misspelled:
-                        await ai_sts.edit(f'<b>✅Aɪ Sᴜɢɢᴇsᴛᴇᴅ ᴍᴇ<code> {is_misspelled}</code> \nSᴏ Iᴍ Sᴇᴀʀᴄʜɪɴɢ ғᴏʀ <code>{is_misspelled}</code></b>')
+                        await ai_sts.edit(f'<b>👀 𝗔𝗶 𝗦𝘂𝗴𝗴𝗲s𝘁𝗶𝗻𝗴 ᴍᴇ 🌿<code> {is_misspelled}</code> \nSᴏ Iᴍ Sᴇᴀʀᴄʜɪɴɢ ғᴏʀ <code>{is_misspelled}</code></b>')
                         await asyncio.sleep(2)
                         message.text = is_misspelled
                         await ai_sts.delete()
