@@ -241,7 +241,7 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<b><a href="https://t.me/moviehub4u_update">{file_name}</a></b>\n\n<b>Uploaded By 🌿 : <a href="https://t.me/moviehub4u_update">[ M◍viε⁠ ｡Hᴗ⁠b ｡4U Update 🌿 ]</a></b>"""
+    CAPTION = """<b><a href="https://t.me/moviehub4u_update">{file_name}</a></b>\n\n<b>Uploaded By 🌿 : <a href="https://t.me/moviehub4u_update"> M◍viε⁠ ｡Hᴗ⁠b ｡4U 🌿 </a></b>"""
     
     IMDB_TEMPLATE_TXT = """
 <b>🏷 Title</b>: <a href={url}>{title}</a>
