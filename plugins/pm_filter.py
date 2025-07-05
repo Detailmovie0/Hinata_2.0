@@ -85,8 +85,8 @@ async def pm_text(bot, message):
             await auto_filter(bot, message)
         else:
             await message.reply_text(
-             text=f"<b><i>ɪ ᴀᴍ ɴᴏᴛ ᴡᴏʀᴋɪɴɢ ʜᴇʀᴇ 🚫 ᴊᴏɪɴ ᴍʏ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴀɴᴅ ꜱᴇᴀʀᴄʜ ᴛʜᴇʀᴇ !</i></b>",   
-             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ꜱᴇᴀʀᴄʜʜᴇʀᴇ ", url=GRP_LNK)]])
+             text=f"<b><i>ɪ ᴀᴍ ɴᴏᴛ ᴡᴏʀᴋɪɴɢ ʜᴇʀᴇ 👀 ᴊᴏɪɴ ᴍʏ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴀɴᴅ ꜱᴇᴀʀᴄʜ ᴛʜᴇʀᴇ 🌿!</i></b>",   
+             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👀 ꜱᴇᴀʀᴄʜʜᴇʀᴇ 🌿", url=GRP_LNK)]])
             )
     except Exception as e:
         print(f"An error occurred: {str(e)}")
@@ -152,26 +152,26 @@ async def next_page(bot, query):
             ]
             btn.insert(0, 
                 [ 
-                    InlineKeyboardButton("ᴘɪxᴇʟ", callback_data=f"qualities#{key}#0"),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}#0"),
-                    InlineKeyboardButton("ꜱᴇᴀꜱᴏɴ",  callback_data=f"seasons#{key}#0")
+                    InlineKeyboardButton("◖ᴘɪxᴇʟ◗", callback_data=f"qualities#{key}#0"),
+                    InlineKeyboardButton("◖ʟᴀɴɢᴜᴀɢᴇ◗", callback_data=f"languages#{key}#0"),
+                    InlineKeyboardButton("◖ꜱᴇᴀꜱᴏɴ◗",  callback_data=f"seasons#{key}#0")
                 ]
             )
             btn.insert(1, [
-                InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}")
+                InlineKeyboardButton("⊰ Sᴇɴᴅ Aʟʟ ⊱", callback_data=f"sendfiles#{key}")
            
             ])
         else:
             btn = []
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴘɪxᴇʟ", callback_data=f"qualities#{key}#0"),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}#0"),
-                    InlineKeyboardButton("ꜱᴇᴀꜱᴏɴ",  callback_data=f"seasons#{key}#0")
+                    InlineKeyboardButton("◖ᴘɪxᴇʟ◗", callback_data=f"qualities#{key}#0"),
+                    InlineKeyboardButton("◖ʟᴀɴɢᴜᴀɢᴇ◗", callback_data=f"languages#{key}#0"),
+                    InlineKeyboardButton("◖ꜱᴇᴀꜱᴏɴ◗",  callback_data=f"seasons#{key}#0")
                 ]
             )
             btn.insert(1, [
-                InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}") 
+                InlineKeyboardButton("⊰ Sᴇɴᴅ Aʟʟ ⊱", callback_data=f"sendfiles#{key}") 
            
             ])
         try:
@@ -208,7 +208,7 @@ async def next_page(bot, query):
                         [InlineKeyboardButton("⋞ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"{math.ceil(int(offset)/int(MAX_B_TN))+1} / {math.ceil(total/int(MAX_B_TN))}", callback_data="pages")]
                     )
                 elif off_set is None:
-                    btn.append([InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/int(MAX_B_TN))+1} / {math.ceil(total/int(MAX_B_TN))}", callback_data="pages"), InlineKeyboardButton("ɴᴇxᴛ ⋟", callback_data=f"next_{req}_{key}_{n_offset}")])
+                    btn.append([InlineKeyboardButton("◖ᴘᴀɢᴇ◗", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/int(MAX_B_TN))+1} / {math.ceil(total/int(MAX_B_TN))}", callback_data="pages"), InlineKeyboardButton("ɴᴇxᴛ ⋟", callback_data=f"next_{req}_{key}_{n_offset}")])
                 else:
                     btn.append(
                         [
@@ -230,7 +230,7 @@ async def next_page(bot, query):
                     [InlineKeyboardButton("⋞ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages")]
                 )
             elif off_set is None:
-                btn.append([InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"), InlineKeyboardButton("ɴᴇxᴛ ⋟", callback_data=f"next_{req}_{key}_{n_offset}")])
+                btn.append([InlineKeyboardButton("◖ᴘᴀɢᴇ◗", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"), InlineKeyboardButton("ɴᴇxᴛ ⋟", callback_data=f"next_{req}_{key}_{n_offset}")])
             else:
                 btn.append(
                     [
@@ -330,7 +330,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         BUTTONS[key] = search   
         files, n_offset, total_results = await get_search_results(chat_id, search, offset=offset, filter=True)
         if not files:
-            await query.answer("🚫 ɴᴏ ꜰɪʟᴇꜱ ᴡᴇʀᴇ ꜰᴏᴜɴᴅ 🚫", show_alert=1)
+            await query.answer("👀 ɴᴏ ꜰɪʟᴇꜱ ᴡᴇʀᴇ ꜰᴏᴜɴᴅ 🌿", show_alert=1)
             return
         temp.GETALL[key] = files
         settings = await get_settings(message.chat.id)
@@ -345,13 +345,13 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
             ]
             btn.insert(0, 
                 [ 
-                    InlineKeyboardButton("ᴘɪxᴇʟ", callback_data=f"qualities#{key}#0"),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}#0"),
-                    InlineKeyboardButton("ꜱᴇᴀꜱᴏɴ",  callback_data=f"seasons#{key}#0")
+                    InlineKeyboardButton("◖ᴘɪxᴇʟ◗", callback_data=f"qualities#{key}#0"),
+                    InlineKeyboardButton("◖ʟᴀɴɢᴜᴀɢᴇ◗", callback_data=f"languages#{key}#0"),
+                    InlineKeyboardButton("◖ꜱᴇᴀꜱᴏɴ◗",  callback_data=f"seasons#{key}#0")
                 ]
             )
             btn.insert(1, [
-                InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}")
+                InlineKeyboardButton("⊰ Sᴇɴᴅ Aʟʟ ⊱", callback_data=f"sendfiles#{key}")
            
             ])
 
@@ -359,30 +359,30 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
             btn = []
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴘɪxᴇʟ", callback_data=f"qualities#{key}#0"),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}#0"),
-                    InlineKeyboardButton("ꜱᴇᴀꜱᴏɴ",  callback_data=f"seasons#{key}#0")
+                    InlineKeyboardButton("◖ᴘɪxᴇʟ◗", callback_data=f"qualities#{key}#0"),
+                    InlineKeyboardButton("◖ʟᴀɴɢᴜᴀɢᴇ◗", callback_data=f"languages#{key}#0"),
+                    InlineKeyboardButton("◖ꜱᴇᴀꜱᴏɴ◗",  callback_data=f"seasons#{key}#0")
                 ]
             )
             btn.insert(1, [           
-                InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}")
+                InlineKeyboardButton("⊰ Sᴇɴᴅ Aʟʟ ⊱", callback_data=f"sendfiles#{key}")
            
             ])
         if n_offset != "":
             try:
                 if settings['max_btn']:
                     btn.append(
-                        [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
+                        [InlineKeyboardButton("◖ᴘᴀɢᴇ◗", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
                     )
     
                 else:
                     btn.append(
-                        [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
+                        [InlineKeyboardButton("◖ᴘᴀɢᴇ◗", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
                     )
             except KeyError:
                 await save_group_settings(query.message.chat.id, 'max_btn', True)
                 btn.append(
-                    [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
+                    [InlineKeyboardButton("◖ᴘᴀɢᴇ◗", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
                 )
         else:
             n_offset = 0
@@ -496,42 +496,42 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             ]
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴘɪxᴇʟ", callback_data=f"qualities#{key}#0"),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}#0"),
-                    InlineKeyboardButton("ꜱᴇᴀꜱᴏɴ",  callback_data=f"seasons#{key}#0")
+                    InlineKeyboardButton("◖ᴘɪxᴇʟ◗", callback_data=f"qualities#{key}#0"),
+                    InlineKeyboardButton("◖ʟᴀɴɢᴜᴀɢᴇ◗", callback_data=f"languages#{key}#0"),
+                    InlineKeyboardButton("◖ꜱᴇᴀꜱᴏɴ◗",  callback_data=f"seasons#{key}#0")
                 ]
             )
             btn.insert(1, [
-                InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}")
+                InlineKeyboardButton("⊰ Sᴇɴᴅ Aʟʟ ⊱", callback_data=f"sendfiles#{key}")
             
             ])
         else:
             btn = []
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴘɪxᴇʟ", callback_data=f"qualities#{key}#0"),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}#0"),
-                    InlineKeyboardButton("ꜱᴇᴀꜱᴏɴ",  callback_data=f"seasons#{key}#0")
+                    InlineKeyboardButton("◖ᴘɪxᴇʟ◗", callback_data=f"qualities#{key}#0"),
+                    InlineKeyboardButton("◖ʟᴀɴɢᴜᴀɢᴇ◗", callback_data=f"languages#{key}#0"),
+                    InlineKeyboardButton("◖ꜱᴇᴀꜱᴏɴ◗",  callback_data=f"seasons#{key}#0")
                 ]
             )
             btn.insert(1, [
-                InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}")            
+                InlineKeyboardButton("⊰ Sᴇɴᴅ Aʟʟ ⊱", callback_data=f"sendfiles#{key}")            
             ])
         if n_offset != "":
             try:
                 if settings['max_btn']:
                     btn.append(
-                        [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
+                        [InlineKeyboardButton("◖ᴘᴀɢᴇ◗", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
                     )
     
                 else:
                     btn.append(
-                        [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
+                        [InlineKeyboardButton("◖ᴘᴀɢᴇ◗", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
                     )
             except KeyError:
                 await save_group_settings(query.message.chat.id, 'max_btn', True)
                 btn.append(
-                    [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
+                    [InlineKeyboardButton("◖ᴘᴀɢᴇ◗", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
                 )
         else:
             n_offset = 0
@@ -631,7 +631,7 @@ async def filter_season_cb_handler(client: Client, query: CallbackQuery):
         BUTTONS[key] = search
         files, n_offset, total_results = await get_search_results(chat_id, search, offset=offset, filter=True)
         if not files:
-            await query.answer("🚫 ɴᴏ ꜰɪʟᴇꜱ ᴡᴇʀᴇ ꜰᴏᴜɴᴅ 🚫", show_alert=1)
+            await query.answer("👀 ɴᴏ ꜰɪʟᴇꜱ ᴡᴇʀᴇ ꜰᴏᴜɴᴅ 🌿", show_alert=1)
             return
         temp.GETALL[key] = files
         settings = await get_settings(message.chat.id)
@@ -646,42 +646,42 @@ async def filter_season_cb_handler(client: Client, query: CallbackQuery):
             ]
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴘɪxᴇʟ", callback_data=f"qualities#{key}#0"),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}#0"),
-                    InlineKeyboardButton("ꜱᴇᴀꜱᴏɴ",  callback_data=f"seasons#{key}#0")
+                    InlineKeyboardButton("◖ᴘɪxᴇʟ◗", callback_data=f"qualities#{key}#0"),
+                    InlineKeyboardButton("◖ʟᴀɴɢᴜᴀɢᴇ◗", callback_data=f"languages#{key}#0"),
+                    InlineKeyboardButton("◖ꜱᴇᴀꜱᴏɴ◗",  callback_data=f"seasons#{key}#0")
                 ]
             )
             btn.insert(1, [
-                InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}")
+                InlineKeyboardButton("⊰ Sᴇɴᴅ Aʟʟ ⊱", callback_data=f"sendfiles#{key}")
 
             ])
         else:
             btn = []
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴘɪxᴇʟ", callback_data=f"qualities#{key}#0"),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}#0"),
-                    InlineKeyboardButton("ꜱᴇᴀꜱᴏɴ",  callback_data=f"seasons#{key}#0")
+                    InlineKeyboardButton("◖ᴘɪxᴇʟ◗", callback_data=f"qualities#{key}#0"),
+                    InlineKeyboardButton("◖ʟᴀɴɢᴜᴀɢᴇ◗", callback_data=f"languages#{key}#0"),
+                    InlineKeyboardButton("◖ꜱᴇᴀꜱᴏɴ◗",  callback_data=f"seasons#{key}#0")
                 ]
             )
             btn.insert(1, [
-                InlineKeyboardButton("📥 Sᴇɴᴅ Aʟʟ 📥", callback_data=f"sendfiles#{key}")            
+                InlineKeyboardButton("⊰ Sᴇɴᴅ Aʟʟ ⊱", callback_data=f"sendfiles#{key}")            
             ])
         if n_offset != "":
             try:
                 if settings['max_btn']:
                     btn.append(
-                        [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
+                        [InlineKeyboardButton("◖ᴘᴀɢᴇ◗", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
                     )
 
                 else:
                     btn.append(
-                        [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
+                        [InlineKeyboardButton("◖ᴘᴀɢᴇ◗", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
                     )
             except KeyError:
                 await save_group_settings(query.message.chat.id, 'max_btn', True)
                 btn.append(
-                    [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
+                    [InlineKeyboardButton("◖ᴘᴀɢᴇ◗", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⋟",callback_data=f"next_{req}_{key}_{n_offset}")]
                 )
         else:
             n_offset = 0
@@ -729,7 +729,7 @@ async def advantage_spoll_choker(bot, query):
         if NO_RESULTS_MSG:
             await bot.send_message(chat_id=BIN_CHANNEL,text=script.NORSLTS.format(reqstr.id, reqstr.mention, movie))
         contact_admin_button = InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔰Cʟɪᴄᴋ ʜᴇʀᴇ & ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴀᴅᴍɪɴ🔰", url=OWNER_LNK)]])
+            [[InlineKeyboardButton("👀 Cʟɪᴄᴋ ʜᴇʀᴇ & ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴀᴅᴍɪɴ 🌿", url=OWNER_LNK)]])
         k = await query.message.edit(script.MVE_NT_FND,reply_markup=contact_admin_button)
         await asyncio.sleep(10)
         await k.delete()
@@ -903,7 +903,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         title = query.message.chat.title
         settings = await get_settings(grp_id)
         btn2 = [[
-                 InlineKeyboardButton("ᴄʜᴇᴄᴋ ᴍʏ ᴅᴍ 🗳️", url=f"telegram.me/{temp.U_NAME}")
+                 InlineKeyboardButton("👀 ᴄʜᴇᴄᴋ ᴍʏ ᴅᴍ 🌿", url=f"telegram.me/{temp.U_NAME}")
                ]]
         reply_markup = InlineKeyboardMarkup(btn2)
         await query.message.edit_text(f"<b>ʏᴏᴜʀ sᴇᴛᴛɪɴɢs ᴍᴇɴᴜ ғᴏʀ {title} ʜᴀs ʙᴇᴇɴ sᴇɴᴛ ᴛᴏ ʏᴏᴜ ʙʏ ᴅᴍ.</b>")
@@ -1021,7 +1021,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
    
     elif query.data.startswith("Not_Released"):
         ident, from_user = query.data.split("#")
-        btn = [[InlineKeyboardButton("📌 Not Released 📌", callback_data=f"nralert#{from_user}")]]
+        btn = [[InlineKeyboardButton("👀 Not Released 🌿", callback_data=f"nralert#{from_user}")]]
         btn2 = [[
             InlineKeyboardButton('ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ', url=link.invite_link),
             InlineKeyboardButton("ᴠɪᴇᴡ ꜱᴛᴀᴛᴜꜱ", url=f"{query.message.link}")
@@ -1061,7 +1061,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data.startswith("Type_Correct_Spelling"):
         ident, from_user = query.data.split("#")
         btn = [[
-                InlineKeyboardButton("♨️ Type Correct Spelling ♨️", callback_data=f"wsalert#{from_user}")
+                InlineKeyboardButton("👀 Type Correct Spelling 🌿", callback_data=f"wsalert#{from_user}")
               ]]
         btn2 = [[
                  InlineKeyboardButton('ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ', url=link.invite_link),
@@ -1149,7 +1149,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ', url=link.invite_link),
                  InlineKeyboardButton("ᴠɪᴇᴡ ꜱᴛᴀᴛᴜꜱ", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("🔍 ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ 🔎", url=GRP_LNK)
+                 InlineKeyboardButton("👀 ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ 🌿", url=GRP_LNK)
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1194,7 +1194,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ', url=link.invite_link),
                  InlineKeyboardButton("ᴠɪᴇᴡ ꜱᴛᴀᴛᴜꜱ", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("🔍 ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ 🔎", url=GRP_LNK)
+                 InlineKeyboardButton("👀 ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ 🌿", url=GRP_LNK)
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1340,15 +1340,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-                    InlineKeyboardButton('+ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ +', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('⊰ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⊱', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('🧧 ᴛʀᴇɴᴅɪɴɢ ', callback_data="topsearch"),
-                    InlineKeyboardButton('🎟️ ᴜᴘɢʀᴀᴅᴇ ', callback_data="premium"),
+		    InlineKeyboardButton('', url="https://t.me/dvl_naruto_06"),
+	        ],[
+                    InlineKeyboardButton('♢ ᴛʀᴇɴᴅɪɴɢ ♢', callback_data="topsearch"),
+                    InlineKeyboardButton('♢ ᴜᴘɢʀᴀᴅᴇ ♢', callback_data="premium"),
                 ],[
-                    InlineKeyboardButton('♻️ ᴅᴍᴄᴀ', callback_data='disclaimer'),
-                    InlineKeyboardButton('👤 ᴀʙᴏᴜᴛ ', callback_data='me')
+                    InlineKeyboardButton('❍ ᴅᴍᴄᴀ ❍', callback_data='disclaimer'),
+                    InlineKeyboardButton('❍ ᴀʙᴏᴜᴛ ❍', callback_data='me')
                 ],[
-                    InlineKeyboardButton('🚫 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 🚫', callback_data="earn")
+                    InlineKeyboardButton('◖ Channel ◗', url='https://t.me/moviehub4u_update'),
+                    InlineKeyboardButton('◖ Group ◗', url='https://t.me/movie_group_bot_0')
+                ],[
+                    InlineKeyboardButton('〇 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 〇', callback_data="earn")
                 ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
