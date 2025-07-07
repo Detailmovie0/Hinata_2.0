@@ -18,13 +18,13 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQ
 
 CAPTION_LANGUAGES = ["Bhojpuri", "Hindi", "Bengali", "Tamil", "English", "Bangla", "Telugu", "Malayalam", "Kannada", "Marathi", "Punjabi", "Bengoli", "Gujrati", "Korean", "Gujarati", "Spanish", "French", "German", "Chinese", "Arabic", "Portuguese", "Russian", "Japanese", "Odia", "Assamese", "Urdu"]
 
-SILENTX_UPDATE_CAPTION = """𝖭𝖤𝖶 𝖥𝖨𝖫𝖤 𝖠𝖣𝖣𝖤𝖣 ✅
+SILENTX_UPDATE_CAPTION = """𝖭𝖤𝖶 𝖥𝖨𝖫𝖤 𝖠𝖣𝖣𝖤𝖣 🌿
 
 {} #{}
-📺 𝖥𝗈𝗋𝗆𝖺𝗍 - {}
-🔰 𝖰𝗎𝖺𝗅𝗂𝗍𝗒 - {}
-🔈 𝖠𝗎𝖽𝗂𝗈 - {}
-🖇️ <a href="{}">𝖨𝖬𝖣𝖡 𝖨𝗇𝖿𝗈</a>
+➦ 𝖥𝗈𝗋𝗆𝖺𝗍 - {}
+✤ 𝖰𝗎𝖺𝗅𝗂𝗍𝗒 - {}
+𝅘𝅥𝅰 𝖠𝗎𝖽𝗂𝗈 - {}
+➥ <a href="{}">𝖨𝖬𝖣𝖡 𝖨𝗇𝖿𝗈\n\n Powered Bye @moviehub4u_update 🌿</a>
 """
 
 notified_movies = set()
@@ -77,13 +77,13 @@ async def send_movie_update(bot, file_name, caption):
         poster = await fetch_movie_poster(title, year)        
         search_movie = file_name.replace(" ", "-")
         unique_id = generate_unique_id(search_movie)
-        reaction_counts[unique_id] = {"❤️": 0, "👍": 0, "👎": 0, "🔥": 0}
+        reaction_counts[unique_id] = {"🖤": 0, "👍": 0, "🌿": 0, "🔥": 0}
         user_reactions[unique_id] = {}        
         full_caption = SILENTX_UPDATE_CAPTION.format(file_name, kind, quality, pixel, language, imdb_link)
         buttons = [[
-            InlineKeyboardButton(f"❤️ {reaction_counts[unique_id]['❤️']}", callback_data=f"r_{unique_id}_{search_movie}_heart"),                
+            InlineKeyboardButton(f"🖤 {reaction_counts[unique_id]['🖤']}", callback_data=f"r_{unique_id}_{search_movie}_heart"),                
             InlineKeyboardButton(f"👍 {reaction_counts[unique_id]['👍']}", callback_data=f"r_{unique_id}_{search_movie}_like"),
-            InlineKeyboardButton(f"👎 {reaction_counts[unique_id]['👎']}", callback_data=f"r_{unique_id}_{search_movie}_dislike"),
+            InlineKeyboardButton(f"🌿 {reaction_counts[unique_id]['🌿']}", callback_data=f"r_{unique_id}_{search_movie}_dislike"),
             InlineKeyboardButton(f"🔥 {reaction_counts[unique_id]['🔥']}", callback_data=f"r_{unique_id}_{search_movie}_fire")
         ],[
             InlineKeyboardButton('Get File', url=f'https://telegram.me/{temp.U_NAME}?start=getfile-{search_movie}')
@@ -108,7 +108,7 @@ async def reaction_handler(client, query):
         search_movie = data[2]
         new_reaction = data[3]
         user_id = query.from_user.id
-        emoji_map = {"heart": "❤️", "like": "👍", "dislike": "👎", "fire": "🔥"}
+        emoji_map = {"heart": "🖤", "like": "👍", "dislike": "🌿", "fire": "🔥"}
         if new_reaction not in emoji_map:
             return
         new_emoji = emoji_map[new_reaction]       
@@ -123,9 +123,9 @@ async def reaction_handler(client, query):
         user_reactions[unique_id][user_id] = new_emoji
         reaction_counts[unique_id][new_emoji] += 1
         updated_buttons = [[
-            InlineKeyboardButton(f"❤️ {reaction_counts[unique_id]['❤️']}", callback_data=f"r_{unique_id}_{search_movie}_heart"),                
+            InlineKeyboardButton(f"🖤 {reaction_counts[unique_id]['🖤']}", callback_data=f"r_{unique_id}_{search_movie}_heart"),                
             InlineKeyboardButton(f"👍 {reaction_counts[unique_id]['👍']}", callback_data=f"r_{unique_id}_{search_movie}_like"),
-            InlineKeyboardButton(f"👎 {reaction_counts[unique_id]['👎']}", callback_data=f"r_{unique_id}_{search_movie}_dislike"),
+            InlineKeyboardButton(f"🌿 {reaction_counts[unique_id]['🌿']}", callback_data=f"r_{unique_id}_{search_movie}_dislike"),
             InlineKeyboardButton(f"🔥 {reaction_counts[unique_id]['🔥']}", callback_data=f"r_{unique_id}_{search_movie}_fire")
         ],[
             InlineKeyboardButton('Get File', url=f'https://telegram.me/{temp.U_NAME}?start=getfile-{search_movie}')
