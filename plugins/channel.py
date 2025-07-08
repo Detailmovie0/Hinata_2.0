@@ -24,7 +24,7 @@ SILENTX_UPDATE_CAPTION = """𝖭𝖤𝖶 𝖥𝖨𝖫𝖤 𝖠𝖣𝖣𝖤𝖣 �
 ➦ 𝖥𝗈𝗋𝗆𝖺𝗍 - {}
 ✤ 𝖰𝗎𝖺𝗅𝗂𝗍𝗒 - {}
 𝅘𝅥𝅰 𝖠𝗎𝖽𝗂𝗈 - {}
-➥ <a href="{}">𝖨𝖬𝖣𝖡 𝖨𝗇𝖿𝗈\n\n Powered Bye @moviehub4u_update 🌿</a>
+➥ <a href="{}">𝖨𝖬𝖣𝖡 𝖨𝗇𝖿𝗈\n\n♢ Powered By @moviehub4u_update 🌿</a>
 """
 
 notified_movies = set()
